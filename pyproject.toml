@@ -1,0 +1,5 @@
+[project]
+name = "python-cli"
+version = "0"
+[project.scripts]
+vendas-cli = "main:main"

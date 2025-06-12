@@ -6,7 +6,9 @@ from utils import utils
 
 def main():
     logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
-
+    
+    run_flag = True
+    
     args = set_parser_arg()
 
     data = utils.get_csv_file(args.filename)

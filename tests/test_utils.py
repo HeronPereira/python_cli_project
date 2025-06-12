@@ -44,13 +44,11 @@ def test_range_date_by_month():
 def test_range_date_by_day():
     assert get_items_in_date_range(mock_list_with_date, '2024-12-01','2024-12-31') == mock_list_2024_12_10_2024_12_12
 
-
 def test_validate_date_right():
     assert validate_date("2025-06-12") == True
 
 def test_validate_date_wrong_slash():
     assert validate_date("2025/06/12") == False
-
 
 def test_validate_date_wrong_inverted():
     assert validate_date("12-06-2025") == False

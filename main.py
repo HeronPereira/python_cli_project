@@ -1,15 +1,8 @@
-import csv
 import logging
 import argparse
 
-def get_csv_file(filename):  
-    with open(file=filename, newline='') as f:
-        dict_reader = csv.DictReader(f)
-        for l in dict_reader:
-            logging.info(l)
 
 
-   
 
 def main():
     # set logging

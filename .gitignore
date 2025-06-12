@@ -2,3 +2,7 @@
 venv
 desafiopythonpl-sr.pdf
 vendasexemplo-python.csv
+__pycache__
+.pytest_cache
+build
+*.egg-info/

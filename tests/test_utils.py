@@ -17,3 +17,6 @@ def test_get_csv_file_wrong_name():
 
 def test_unificar_items():
     assert unify_items(mock_list) == unified_list
+
+def test_unificar_items_without_repetition():
+    assert unify_items(unified_list) == unified_list

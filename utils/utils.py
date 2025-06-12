@@ -1,9 +1,10 @@
 import csv
 import logging
+from typing import List, Dict
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
-def get_csv_file(filename: str):
+def get_csv_file(filename: str) -> List[Dict[str,str]]:
     try:  
         with open(file=filename, newline='') as f:
             dict_reader = csv.DictReader(f)
@@ -12,9 +13,8 @@ def get_csv_file(filename: str):
     except Exception as e:
         logging.error("File not found!")
         return []
-    
-# pegar os dados de interesse, unir com o nome igual
-def unify_items(data: list)->list:
+
+def unify_items(data: List[Dict[str,str]]) -> List[Dict[str,str]]:
     unified_items = {}
     for d in data:
         if d['produto'] not in unified_items:
